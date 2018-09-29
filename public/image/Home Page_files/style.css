@@ -1,0 +1,385 @@
+<style>
+
+/*start carousel and navigation*/
+
+@font-face {
+    font-family: 'nicon';
+    src: url('{{ asset("fonts/googlefonts/Niconne-Regular.ttf") }}');
+}
+
+@font-face {
+  font-family: 'ale';
+  src: url('{{ asset("fonts/googlefonts/AlegreyaSans-MediumItalic.ttf") }}');
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url('{{ asset("fonts/googlefonts/Nunito-Bold.ttf") }}');
+}
+
+@font-face {
+  font-family: 'nunito-ex';
+  src: url('{{ asset("fonts/googlefonts/Nunito-ExtraLight.ttf") }}');
+}
+
+
+@media screen and (max-width: 992px) {
+  .text {
+    text-align: center;
+    padding-left: 100px;
+  }
+  .text .slide-htext {
+    font-size: 25px;
+  }
+  .text .slide-ptext {
+    font-size: 18px;
+  }
+  .carousel-text {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .greet-text{
+    padding-left: 100px; 
+  }
+  #headerid ul {
+    padding-left: 79px;
+  }
+}
+
+
+@media screen and (max-width: 334px) {
+  .greet-text{
+    padding-left: 60px;
+  }
+  #headerid ul {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 421px) {
+  .greet-text{
+    padding-left: 85px; 
+  }
+  #headerid ul {
+    padding-left: 70px;
+  }
+}
+.carouselslide:nth-child(1) {
+  background: url("{{ asset('image/bgimage_1.jpg') }}");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carouselslide:nth-child(2) {
+  background: url("{{ asset('image/bgimage_2.jpg') }}");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carouselslide:nth-child(3) {
+  background: url("{{ asset('image/bgimage_3.jpg') }}");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carousel-fade .carousel-inner .carousel-item {
+  opacity: 0.8;
+  transition-property: opacity;
+  /*transition-duration: 5s;*/
+  transition-delay: 0s;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-text {
+  margin-top: 60px;
+  color: white;
+}
+
+.text {
+  margin-top: 80px;
+}
+
+.slide-htext {
+  font-size: 45px;
+  font-family: 'nunito';
+}
+
+
+.greet-text {
+  font-family: 'ale';
+  font-size: 20px;
+}
+
+.carouselslide {
+  height: 500px;
+}
+
+
+.carousel-fade .carousel-inner .carousel-item {
+  opacity: 0.8;
+  transition-property: opacity;
+  /*transition-duration: 5s;*/
+  transition-delay: 0s;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.slide-ptext {
+  font-size: 20px;
+  padding-left: 5px;
+  font-family: 'nunito-ex';
+}
+
+.shopnow-btn {
+  border-radius: 20px; 
+}
+
+.dropdown-menu a {
+  color: white;
+}
+
+
+.dropdown-menu {
+  margin-top: 23px;
+  background-color: #3E4A64;
+  display: none;
+  transition: display 5s linear;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+	/*end carousel and navigation*/
+
+	/*start smart phone*/
+
+  .sub-h {
+    font-family: 'ale';
+    color: white;
+  }
+
+  .category-con a {
+    border-radius: 20px;
+  }
+
+  .category-fa{
+    display: inline-block;
+  	border: 1px solid #A4A4A4;
+  	width: 100px;
+  	height: 100px;
+  	border-radius: 100%;
+  }
+
+  .latest{
+  	width: 100%;
+    height: auto;
+  	position: relative;
+  	overflow: hidden;
+    font-family: 'ale';
+  }
+
+  .latest-product {
+    margin-bottom: 60px;
+  }
+
+  .hover-effect {
+  	position: absolute;
+  	left: -200%;
+  	top: 40%;
+    width: 100%;
+    color: white;
+  }
+
+
+
+  .latest:hover .hover-effect{
+  	left:0px;
+  	transition: left 0.8s;
+  }
+
+
+  .hover-effect li {
+    width: 33%;
+    height: 35px;
+    line-height: 35px;
+  	text-align: center;
+  	list-style-type: none;
+  	background-color: #97A0B9;
+  	float: left;
+  }
+
+  .hover-effect li:hover{
+    background-color: #67D7BB;
+    color: white;
+  }
+
+  .hover-effect a{
+  	text-decoration: none;
+    font-size: 15px;
+    color: white;
+  }
+
+  @media screen and (max-width: 992px) {
+    .hover-effect a{
+      display: none;
+    }
+  }
+
+  /*end smart phone*/
+
+  div.discount {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .discount>.discount-text {
+    font-family: 'ale';
+    color: white;
+    font-size: 60px;
+    width: 100%;
+    height: auto;
+    /*transform: skewY(-16deg);*/
+    position: absolute;
+    top: 30%;
+    animation-name: text_animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes text_animation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    10% {
+      transform: rotateY(10deg);
+    }
+    20% {
+      transform: rotateY(20deg);
+    }
+    30% {
+      transform: rotateY(30deg);
+    }
+    40% {
+      transform: rotateY(40deg);
+    }
+    50% {
+      transform: rotateY(50deg);
+    }
+    60% {
+      transform: rotateY(60deg);
+    }
+    70% {
+      transform: rotateY(70deg);
+    }
+    80% {
+      transform: rotateY(80deg);
+    }
+    90% {
+      transform: rotateY(90deg);
+    }
+    100% {
+      transform: rotateY(100deg);
+    }
+  }
+
+
+  /*start footer*/
+
+      .footer{
+        background: #2a3d47;
+        color: white;
+        font-family: 'ale';
+      }
+      #myaccount,#info{
+        list-style-type: none;
+      }
+      #myaccount a, #info a{
+        color: white;
+        text-decoration: none;
+        color: white;
+      }
+      #myaccount a:hover{
+        color: white;
+        text-decoration: none;
+      }
+      #myaccount li{
+        line-height: 15px;
+      }
+      .my{
+        margin-bottom: 20px;
+      }
+      .one{
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 30px
+
+      }
+      .icon{
+        margin-left: 3px;
+        margin-top: 15px;
+      }
+      hr{
+        background:white;
+        
+
+      }
+      .em{
+        margin-left: -1px;
+      }
+      @media screen and (max-width: 600px) {
+        div.example {
+          display: none;
+          }
+      }
+
+  /*end footer*/
+
+  /*start product*/
+
+  .para{
+    line-height: 20px;
+  }
+
+  .feature-card {
+    font-family: 'ale';
+  }
+
+  .feature-card a{
+    border-radius: 20px;
+  }
+
+  .feature-card span {
+    font-size: 13px;
+  }
+
+
+  #image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .brand {
+    padding-bottom: 65px;
+  }
+
+  /*end product*/
+
+</style>
